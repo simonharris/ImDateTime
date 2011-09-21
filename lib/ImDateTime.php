@@ -74,4 +74,13 @@ class ImDateTime
 		return $this->_dt->getTimezone();
 	}
 
+
+	/**
+	 * @return int
+	 */
+	public function getOffset()
+	{
+		return $this->_dt->getOffset();
+	}
+
 }

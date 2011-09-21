@@ -3,9 +3,11 @@ ImDateTime is an experiment in how a non-mutable PHP DateTime might look.
 Instead of being mutable, this follows the Value Object pattern, which is more
 typical for date and time objects.
 
+The intention is to preserve the DateTime API as closely as possible, whilst
+replacing the various modification functions.
+
 TODO:
 
- - getOffset()
  - createFromFormat()
  - getLastErrors()
- - ensure all tests run is different timezones
+ - ensure all tests run in different timezones
