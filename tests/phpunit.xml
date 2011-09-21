@@ -1,0 +1,27 @@
+<phpunit colors="true"
+			bootstrap="./TestHelper.php"
+			stopOnError="true"
+			stopOnFailure="true"
+			stopOnIncomplete="true"
+			stopOnSkipped="true">
+	<testsuite name="ImDateTime Test Suite">
+		<directory>./</directory>
+	</testsuite>
+	<filter>
+		<whitelist>
+			<directory suffix=".php">../lib/</directory>
+			<!-- exclude>
+				<directory suffix=".phtml">../application/</directory>
+			</exclude -->
+		</whitelist>
+	</filter>
+	<!-- logging>
+		<log type="coverage-html"
+			target="../reports/"
+			charset="UTF-8"
+			lowUpperBound="80"
+			highLowerBound="100"
+			yui="true"
+			highlight="true" />
+	</logging -->
+</phpunit>
