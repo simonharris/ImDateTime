@@ -58,6 +58,15 @@ class ImDateTime
 
 
 	/**
+	 * @param ImDateTime $that
+	 */
+	public function diff(self $that)
+	{
+		return $this->_dt->diff($that->_getDateTimeObject());
+	}
+
+
+	/**
 	 * @return int
 	 */
 	 public function getTimestamp()
@@ -91,6 +100,15 @@ class ImDateTime
 	public function format($format)
 	{
 		return $this->_dt->format($format);
+	}
+
+
+	/**
+	 * @return DateTime
+	 */
+	private function _getDateTimeObject()
+	{
+		return $this->_dt;
 	}
 
 }
