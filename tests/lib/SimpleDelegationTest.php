@@ -48,4 +48,17 @@ class SimpleDelegationTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals(-14400, $summer->getOffset());
 	}
 
+
+	/**
+	 * If we break format(), all is lost
+	 */
+	public function testFormat()
+	{
+		$dt = new ImDateTime('2010-12-21 21:53:12', new DateTimeZone('America/New_York'));
+
+		$this->assertEquals('2010', $dt->format('Y'));
+		$this->assertEquals('Tue, 21 Dec 10 21:53:12 -0500', $dt->format(DateTime::RFC822));
+
+	}
+
 }

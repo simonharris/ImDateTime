@@ -83,4 +83,14 @@ class ImDateTime
 		return $this->_dt->getOffset();
 	}
 
+
+	/**
+	 * @param string $format
+	 * @return string
+	 */
+	public function format($format)
+	{
+		return $this->_dt->format($format);
+	}
+
 }
