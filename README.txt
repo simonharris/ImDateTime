@@ -8,6 +8,5 @@ replacing the various modification functions.
 
 TODO:
 
- - createFromFormat()
  - getLastErrors()
  - ensure all tests run in different timezones
