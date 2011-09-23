@@ -17,9 +17,6 @@
 class DiffTest extends PHPUnit_Framework_TestCase
 {
 
-	/**
-	 * If we break format(), all is lost
-	 */
 	public function testDiff()
 	{
 		$datetime1 = new ImDateTime('2009-10-11');

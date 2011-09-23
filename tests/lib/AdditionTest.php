@@ -32,4 +32,5 @@ class AdditionTest extends PHPUnit_Framework_TestCase
 		// Sanity check that the old one is unmodified
 		$this->assertEquals($starttime, $startdt->getTimestamp());
 	}
+	
 }

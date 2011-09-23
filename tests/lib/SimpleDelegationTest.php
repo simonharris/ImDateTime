@@ -58,7 +58,6 @@ class SimpleDelegationTest extends PHPUnit_Framework_TestCase
 
 		$this->assertEquals('2010', $dt->format('Y'));
 		$this->assertEquals('Tue, 21 Dec 10 21:53:12 -0500', $dt->format(DateTime::RFC822));
-
 	}
 
 }
