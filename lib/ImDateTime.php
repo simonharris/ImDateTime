@@ -36,6 +36,21 @@ class ImDateTime
 
 
 	/**
+	 * @param string $format
+	 * @param string $time
+	 * @param DateTimeZone $timezone = NULLL
+	 */
+	 public static function createFromFormat($format, $time, $timezone = NULL)
+	 {
+		$dt  = call_user_func_array(array('DateTime', 'createFromFormat'),
+									func_get_args());
+		$idt = new self();
+		$idt->_setDateTimeObject($dt);
+		return $idt;
+	 }
+
+
+	/**
 	 * @param DateInterval $interval The amount of time to add
 	 */
 	public function add(DateInterval $interval)
@@ -109,6 +124,15 @@ class ImDateTime
 	private function _getDateTimeObject()
 	{
 		return $this->_dt;
+	}
+
+
+	/**
+	 * @param DateTime $datetime
+	 */
+	private function _setDateTimeObject(DateTime $datetime)
+	{
+		$this->_dt = $datetime;
 	}
 
 }
