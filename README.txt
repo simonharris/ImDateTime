@@ -6,6 +6,8 @@ which is more typical for date and time objects.
 The intention is to preserve the DateTime API as closely as possible, whilst
 replacing the various modification functions.
 
+Note that since ImDateTime was created this has become core functionality in PHP, as provided by the DateTimeImmutable class.
+
 TODO:
 
  - getLastErrors()
